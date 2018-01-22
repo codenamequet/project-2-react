@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 class Header extends Component {
     render () {
         return (
-            <div>
+            <div class='header'>
                 <head>
                     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
                     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.3/css/materialize.min.css" />
