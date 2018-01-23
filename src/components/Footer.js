@@ -1,5 +1,14 @@
 import React, { Component } from 'react'
-import './footer.css'
+
+const footerBody = {
+        display: 'flex',
+        minHeight: '100vh',
+        flexDirection: 'column'
+}
+
+const footerMain = {
+    flex: '1 0 auto'
+}
 
 class Footer extends Component {
     render() {

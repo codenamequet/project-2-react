@@ -25,7 +25,7 @@ class Shoes extends Component {
         console.log('shoes[0].shoes is ', shoes)
         return (
             <div>
-                <p>{shoes.length && shoes[0].name} are here!</p>
+                {/* <p>{shoes.length && shoes[0].name}</p> */}
                 <img src={shoes.length && shoes[0].images} />
                 {/* <p>{this.shoes.name}</p> */}
             </div>
