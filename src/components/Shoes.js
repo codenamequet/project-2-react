@@ -2,13 +2,8 @@ import React, { Component } from 'react'
 
 class Shoes extends Component {
     state = {
-        name: [],
-        img: [],
+        shoes: [],
     }
-    
-    
-    
-    
     
     render () {
         return (
