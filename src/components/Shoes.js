@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import axios from 'axios'
+import { SHOES_URL } from '../constants.js'
+
 
 class Shoes extends Component {
     state = {
@@ -13,5 +16,10 @@ class Shoes extends Component {
         )
     }
 }
+
+axios
+.get(`${SHOES_URL}`)
+.catch(err => console.log(err))
+
 
 export default Shoes
