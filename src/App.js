@@ -11,7 +11,7 @@ class App extends Component {
        <Shoes />
        <Footer />
       </div>
-    );
+    )
   }
 }
 
