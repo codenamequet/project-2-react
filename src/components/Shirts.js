@@ -4,8 +4,10 @@ import { SHIRTS_URL } from '../constants.js'
 
 const shirtsStyle = {
     color: 'blue',
-    width: '200px',
-    height: '300px'
+    // width: '200px',
+    // height: '250px'
+    width: '15vw',
+    height: '35vh',
 }
 
 class Shirts extends Component {

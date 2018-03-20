@@ -4,8 +4,10 @@ import { ACCESSORIES_URL } from '../constants.js'
 
 const accessoriesStyle = {
     color: 'blue',
-    width: '150px',
+    width: '200px',
     height: '200px',
+    // width: '15vw',
+    // height: '25vh',
 }
 
 class Accessories extends Component {

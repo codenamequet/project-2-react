@@ -1,7 +1,15 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { SHOES_URL } from '../constants.js'
+// import './Shoes.css'
 
+const shoesStyle = {
+    color: 'blue',
+    // width: '200px',
+    // height: '250px',
+    width: '15vw',
+    height: '25vh',
+}
 
 class Shoes extends Component {
     state = {
@@ -26,7 +34,7 @@ class Shoes extends Component {
         return (
             <div>
                 {/* <p>{shoes.length && shoes[0].name}</p> */}
-                <img src={shoes.length && shoes[0].images} />
+                <img style={shoesStyle} src={shoes.length && shoes[0].images} />
                 {/* <p>{this.shoes.name}</p> */}
             </div>
         )
