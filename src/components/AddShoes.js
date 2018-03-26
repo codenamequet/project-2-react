@@ -39,8 +39,7 @@ class AddShoes extends Component {
     }
 
     handleSubmit = () => {
-        axios
-        .post(`${SHOES_URL}/${this.state.shoes.name}`, {shoes: this.state.shoes})
+        axios.post(`${SHOES_URL}/${this.state.shoes.name}`, {shoes: this.state.shoes})
         .then(this.setState({toDashboard: true}))
         .catch(err => console.log(err))
     }
@@ -48,10 +47,12 @@ class AddShoes extends Component {
     render() {
         let shoes = this.state.shoes
         console.log('sneaker is', shoes)
+        console.log(`this is the state at the end: ${this.state.shoes}`)
+        // console.log(`the url is: ${SHOES_URL}/${this.state.shoes.name}`)
         if (this.state.toDashboard === true) {
             return <Redirect to={{
-                pathname: `${shoes.name}`,
-                state: {shoes: shoes}
+                pathname: `/shoes/${shoes.name}`,
+                state: {shoes:shoes},
             }} />
         }
         return(
@@ -64,7 +65,7 @@ class AddShoes extends Component {
                 <input type='text' placeholder='image' onChange={this.handleImage} />
                 <input type='text' placeholder='tags' onChange={this.handleTags} />
 
-               <input style={buttonStyle} type='button' className='submit-buton' value='submit' onClick={this.handleSubmit} />
+               <input style={buttonStyle} type='button' value='submit' onClick={this.handleSubmit} />
             </div>
             </div>
         )

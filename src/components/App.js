@@ -2,11 +2,8 @@ import React, { Component } from 'react'
 import {Switch, Route} from 'react-router-dom'
 import Header from './Header'
 import Footer from './Footer'
-import Accessories from './Accessories'
-import Shirts from './Shirts'
-import Pants from './Pants'
-import Shoes from './Shoes'
 import AddShoes from './AddShoes'
+import Landing from './Landing'
 
 
 class App extends Component {
@@ -16,8 +13,9 @@ class App extends Component {
        <Header />
        <main>
         <Switch>
-          <Route exact path='/' render={() => (<AddShoes/>)}/>
-          <Route exact path='/*' render={() => (<Shoes/>)}/>
+          <Route exact path='/' render={() => (<Landing />)} />
+          <Route exact path='/shoes/add' render={() => (<AddShoes />)} />
+          <Route exact path='/*' render={() => (<Landing />)} />
         </Switch>
        {/* <Accessories />
        <Shirts />

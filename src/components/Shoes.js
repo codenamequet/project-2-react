@@ -35,6 +35,9 @@ class Shoes extends Component {
             <div>
                 {/* <p>{shoes.length && shoes[0].name}</p> */}
                 <img style={shoesStyle} src={shoes.length && shoes[0].images} />
+                <img style={shoesStyle} src={shoes.length && shoes[1].images} />
+                <img style={shoesStyle} src={shoes.length && shoes[2].images} />
+                <img style={shoesStyle} src={shoes.length && shoes[3].images} />
                 {/* <p>{this.shoes.name}</p> */}
             </div>
         )
