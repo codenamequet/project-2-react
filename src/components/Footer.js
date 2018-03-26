@@ -18,7 +18,7 @@ class Footer extends Component {
                 <head>
                     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
                     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.3/css/materialize.min.css" />
-                    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+                    {/* <link rel="stylesheet" href="assets/css/style.css" type="text/css" /> */}
                     <title>Project 2</title>
                 </head>
             <main>
