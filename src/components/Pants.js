@@ -27,6 +27,7 @@ class Pants extends Component {
         return (
             <div>
                 <img style={pantsStyle}src={pants.length && pants[0].images} />
+                <img style={pantsStyle}src={pants.length && pants[1].images} />
             </div>
         )
     } 

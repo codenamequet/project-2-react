@@ -27,6 +27,7 @@ class Accessories extends Component {
         return (
             <div>
                 <img style={accessoriesStyle}src={accessories.length && accessories[0].images} />
+                <img style={accessoriesStyle}src={accessories.length && accessories[1].images} />
             </div>
         )
     } 

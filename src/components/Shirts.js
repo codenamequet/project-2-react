@@ -30,6 +30,7 @@ class Shirts extends Component {
             <div>
                 {/* <p style={shirtsStyle}>{shirts.length && shirts[0].name}</p> */}
                 <img style={shirtsStyle}src={shirts.length && shirts[0].images} />
+                <img style={shirtsStyle}src={shirts.length && shirts[1].images} />
             </div>
         )
     } 

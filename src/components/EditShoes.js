@@ -4,7 +4,6 @@ import {SHOES_URL} from '../constants.js'
 import {Redirect} from 'react-router-dom'
 
 import Shoes from './Shoes'
-import EditShoes from './EditShoes'
 
 const headerStyle = {
     textAlign: 'center'
@@ -15,9 +14,10 @@ const buttonStyle = {
     marginBottom: '10vh'
 }
 
-class AddShoes extends Component {
+class EditShoes extends Component {
     state = {
         shoes: {},
+        // shoes: this.props.location.shoes,
         toDashboard: false
     }
 
@@ -42,7 +42,8 @@ class AddShoes extends Component {
     }
 
     handleSubmit = () => {
-        axios.post(`${SHOES_URL}/${this.state.shoes.name}`, {shoes: this.state.shoes})
+        axios
+        .put(`${SHOES_URL}/${this.state.shoes.name}`, {shoes: this.state.shoes})
         .then(this.setState({toDashboard: true}))
         .catch(err => console.log(err))
     }
@@ -58,23 +59,26 @@ class AddShoes extends Component {
                 state: {shoes:shoes},
             }} />
         }
+        console.log(`these are the props: ${this.props}`)
+        let test = this.props
         return(
             <div>
             <div>
-                <Shoes />
-                <h3 style={headerStyle}>Add Shoes</h3>
-                <input type='text' placeholder='name' onChange={this.handleName} />
-                <input type='text' placeholder='category' onChange={this.handleCategory} />
-                <input type='text' placeholder='color' onChange={this.handleColor} />
-                <input type='text' placeholder='image' onChange={this.handleImage} />
-                <input type='text' placeholder='tags' onChange={this.handleTags} />
+                {/* <Shoes /> */}
+                <h3 style={headerStyle}>Edit {shoes.name}</h3>
+                {/* <p>also testing out ${test}</p> */}
+                <input type='text' placeholder={shoes.name} onChange={this.handleName} />
+                <input type='text' placeholder={shoes.category} onChange={this.handleCategory} />
+                <input type='text' placeholder={shoes.color} onChange={this.handleColor} />
+                <input type='text' placeholder={shoes.image} onChange={this.handleImage} />
+                <input type='text' placeholder={shoes.tags} onChange={this.handleTags} />
+                
 
                <input style={buttonStyle} type='button' value='submit' onClick={this.handleSubmit} />
-                {/* <EditShoes /> */}
             </div>
             </div>
         )
     }
 }
     
-export default AddShoes
+export default EditShoes
