@@ -30,7 +30,6 @@ class ShoesDetails extends Component {
                     <p>Name: {shoe.name}</p>
                     <p>Category: {shoe.category}</p>
                     <p>Color: {shoe.color}</p>
-                    <p>Image: {shoe.image}</p>
                     <p>Tags: {shoe.tags}</p>
                     <button>
                         <Link to={{

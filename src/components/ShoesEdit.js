@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import axios from 'axios'
 import {SHOES_URL} from '../constants.js'
-import {Redirect} from 'react-router-dom'
+import {Redirect, Link} from 'react-router-dom'
 
 // import Shoes from './Shoes'
 
@@ -61,9 +61,15 @@ class ShoesEdit extends Component {
         }
         return(
             <div>
-                <h1>{shoe.name}</h1>
                 <div>
                 {/* <ShoesContainer /> */}
+                <Link to={{
+                    pathname: `/shoes/${shoe.name}`,
+                    state: {shoe: shoe}
+                }}>
+                    <h1>{shoe.name}</h1>
+                </Link>
+                <img src={shoe.images} alt='shoe image' />
                 <h3 style={headerStyle}>Edit {shoe.name}</h3>
                 {/* <p>also testing out ${test}</p> */}
                 <input type='text' placeholder={shoe.name} onChange={this.handleName} />

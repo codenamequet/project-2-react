@@ -5,7 +5,7 @@ import Footer from './Footer'
 import AddAccessories from './AddAccessories'
 import AddShirts from './AddShirts'
 import AddPants from './AddPants'
-// import AddShoes from './AddShoes'
+import AddShoes from './AddShoes'
 import EditShoes from './EditShoes'
 import Landing from './Landing'
 import About from './About'
@@ -27,8 +27,8 @@ class App extends Component {
           <Route exact path='/shirts' render={() => (<AddShirts />)} />
           <Route exct path='/pants' render={() => (<AddPants />)} /> */}
           <Route exact path='/shoes' render={(props) => (<ShoesContainer {...props}/>)}/>
-          {/* <Route exact path='/shoes' render={() => (<AddShoes />)} /> */}
-          {/* <Route path='/shoes/:name/edit' render={props => (<ShoesEdit {...props} />)} /> */}
+          <Route exact path='/shoes/add' render={() => (<AddShoes />)} />
+          <Route path='/shoes/:name/edit' render={props => (<ShoesEdit {...props} />)} />
           <Route path='/shoes/:name' render={(props) => (<ShoesDetails {...props}/>)}/>
           <Route path='/about' render={() => (<About />)} />
           <Route exact path='/*' render={() => (<Landing />)} />

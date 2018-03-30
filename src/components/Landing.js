@@ -3,6 +3,7 @@ import Accessories from './Accessories'
 import Shirts from './Shirts'
 import Pants from './Pants'
 import Shoes from './Shoes'
+// import ShoesContainer from './ShoesContainer'
 
 class Landing extends Component {
     render () {
@@ -12,6 +13,7 @@ class Landing extends Component {
                 <Shirts />
                 <Pants />
                 <Shoes />
+                {/* <ShoesContainer /> */}
             </div>
         )
     }
