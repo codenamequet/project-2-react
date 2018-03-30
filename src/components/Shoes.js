@@ -4,7 +4,6 @@ import { SHOES_URL } from '../constants.js'
 import {Link} from 'react-router-dom'
 
 const shoesStyle = {
-    color: 'blue',
     width: '15vw',
     height: '25vh',
 }
